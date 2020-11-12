@@ -6,19 +6,19 @@ This tutorial is assuming:
 - You have a working NestJS project
 - You are using MongoDB and mongoose
 
-In a recent past, I had a urge to do a bit of refactoring on my discord game. 
-Still a work in progress, but i couldn't stand anymore the fact thar houses were named homes...
-I already can ear you, 'just change labels displayed no one care!'. 
+In the recent past, I had an urge to do a bit of refactoring on my discord game. 
+Still a work in progress, but I couldn't stand anymore the fact that houses were named homes...
+I already can hear you, 'just change labels displayed no one care!'. 
 
 ![FAUX](https://media.giphy.com/media/4ObtlO6BjidKE/giphy.gif)
 
-I do care about consistency of naming in my code bases. If homes are houses then next thing you know is:
+I do care about the consistency of naming in my codebases. If homes are houses then the next thing you know is:
 Canons will become wooden swords and wolves are dogs...
 
-I spent a some time online looking for solutions and I finally built something I like.
-Let me present you the result of my work.
+I spent some time online looking for solutions and I finally built something I like.
+Let me present to you the result of my work.
 
-I chose to use the [`migrate`](https://www.npmjs.com/package/migrate) library since it is database agnostic, offer and easy up/down logic and can store the migration status in any form.
+I chose to use the [`migrate`](https://www.npmjs.com/package/migrate) library since it is database agnostic, offers an easy up/down logic, and can store the migration status in any form.
 
 Enough speaking about me, let me guide you through this journey.
 
@@ -29,7 +29,7 @@ Go on install the bad guy!
 npm i --save migrate
 ```
 
-## Create a folder to store you migrations!
+## Create a folder to store your migrations!
 
 You will new two folders:
 ```bash
@@ -40,7 +40,7 @@ mkdir src/migrations-utils
 The first one will store the update scripts and the seconds will store some utilities.
 Let's look into the seconds.
 
-## Some litlle helpers
+## Some little helpers
 
 In the introduction, I told you that migrate is database agnostic. 
 Therefore you need to write a little mongodb connector:
@@ -80,7 +80,7 @@ export const down = async () => {
 };
 ```
 
-I had some troubles with `ts-node/register` in migrate command line. 
+I had some trouble with `ts-node/register` in migrate command line. 
 This little helper solved my transpilation errors!
 Do the same! now! do it!
 ```js
@@ -101,14 +101,14 @@ Add this sweet line in the `package.json`, in the script section!
 ```
 
 `--template-file ./src/migrations-utils/template.ts` provide a template file, it's a necessary thing since we are in a typescript repo. 
-It also provide you an easy way to bootstrap migration just the way you like it!
+It also provides you an easy way to bootstrap migration just the way you like it!
 
 `--migrations-dir=\"./src/migrations\"` Tell migrate where your migration scripts are stored. 
 By default, it's at the project root. 
 
 `--compiler=\"ts:./src/migrations-utils/ts-compiler.js\"` Explain to migrate how to handle typescript files.
 
-Now, you just need to run this command to create and empty typescript migration file in the correct folder!
+Now, you just need to run this command to create an empty typescript migration file in the correct folder!
 
 ```
 npm run migrate:create -- <migration name>
@@ -116,13 +116,13 @@ npm run migrate:create -- <migration name>
 
 ### A script for upgrades and a script for downgrades
 
-AAAAAAnd two more line in the `package.json`, again in the scripts section!
+AAAAAAnd two more lines in the `package.json`, again in the scripts section!
 ```
 "migrate:up": "migrate --migrations-dir=\"./src/migrations\" --compiler=\"ts:./src/migrations-utils/ts-compiler.js\" up",
 "migrate:down": "migrate --migrations-dir=\"./src/migrations\" --compiler=\"ts:./src/migrations-utils/ts-compiler.js\" down"
 ```
 
-No new options here, I already explained them but refeshing is nice.
+No new options here, I already explained them but refreshing is nice.
 
 `--migrations-dir=\"./src/migrations\"` Tells migrate where to find your migrations!
 
@@ -134,7 +134,7 @@ You can now run update script: `npm run migrate:up` or downgrade script `npm run
 
 Migrate will store your migration state in a file at the project root.
 This file is called `migrate.json`.
-It look like this: 
+It looks like this: 
 ```json
 {
   "lastRun": "1605197159478-test.ts",
