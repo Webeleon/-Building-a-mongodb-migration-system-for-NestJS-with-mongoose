@@ -152,6 +152,8 @@ It look like this:
 
 ## Questions?
 
+![questions](https://media.giphy.com/media/5XRB3Ay93FZw4/giphy.gif)
+
 I'll be glad to answers questions in the comments.
 
 If you liked my discord consider joining my coding lair!
@@ -164,6 +166,8 @@ And since I'm a nice guy, here, take this sample repo containing a working codeb
 :gift:[Get the code of the tuto from github](https://github.com/Webeleon/-Building-a-mongodb-migration-system-for-NestJS-with-mongoose.git)
 
 ## Documentation
+
+![documentation](https://media.giphy.com/media/3o6ozkeXSb0Cm25CzS/giphy.gif)
 
 - [NestJS](https://nestjs.com/)
 - [Install mongoose with nest](https://docs.nestjs.com/techniques/mongodb)
