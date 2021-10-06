@@ -1,6 +1,6 @@
 ![banner](images/banner.png)
 
-# Coder un systéme de migration pour NestJS avec mongoos
+# Coder un système de migration pour NestJS avec mongoos
 
 Prérequis:
 - Un projet NestJS fonctionel
@@ -44,7 +44,7 @@ Commencons par le second!
 
 ## Quelques outils
 
-Dans l'intro, nous avons vu que l'outil `migrate` fait fi du type de tes bases de données.
+Dans l'intro, nous avons vu que l'outil `migrate` fait fi du type de nos bases de données.
 Nous avons donc besoin d'un script pour nous connecter à mongodb:
 ```typescript
 import { MongoClient } from 'mongodb';
@@ -83,9 +83,9 @@ export const down = async () => {
 ```
 
  
-J'ai rencontré quelques soucis avec `ts-node/register` en utilisant `migrate` en ligne de commande.,,
+J'ai rencontré quelques soucis avec `ts-node/register` en utilisant `migrate` en ligne de commande...
 Ce petit script m'a sauvé la mise!
-Vas y! Maintenant! Ajoute-le!
+Vas-y! Maintenant! Ajoute-le!
 ```js
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const tsNode = require('ts-node');
