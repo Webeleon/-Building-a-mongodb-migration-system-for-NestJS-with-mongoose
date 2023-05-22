@@ -24,6 +24,6 @@ jobs:
           npm run test:cov
     services:
       mongodb:
-        image: mongo:3.4.23
+        image: mongo:3.7.9
         ports:
           - 27017:27017
