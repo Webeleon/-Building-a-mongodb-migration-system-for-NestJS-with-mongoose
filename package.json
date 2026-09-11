@@ -27,18 +27,18 @@
     "migrate:down": "migrate --migrations-dir=\"./src/migrations\" --compiler=\"ts:./src/migrations-utils/ts-compiler.js\" down"
   },
   "dependencies": {
-    "@nestjs/common": "7.6.18",
-    "@nestjs/core": "7.6.18",
-    "@nestjs/platform-express": "7.6.18",
+    "@nestjs/common": "12.0.1",
+    "@nestjs/core": "12.0.1",
+    "@nestjs/platform-express": "12.0.1",
     "dotenv": "8.6.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "6.6.7"
   },
   "devDependencies": {
-    "@nestjs/cli": "7.6.0",
-    "@nestjs/schematics": "7.3.1",
-    "@nestjs/testing": "7.6.18",
+    "@nestjs/cli": "12.0.0",
+    "@nestjs/schematics": "12.0.1",
+    "@nestjs/testing": "12.0.1",
     "@types/express": "4.17.25",
     "@types/jest": "26.0.24",
     "@types/node": "14.18.63",
